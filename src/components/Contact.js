@@ -9,20 +9,12 @@ function Contact(props) {
             <img className="avatar" src={props.avatar} alt='toto'/>
             <div className="name">{props.name}</div><br></br>
             
-            <div className="infos">
-                <p className="text">{props.online ? 'Online' : 'Offline'}</p>
-                 
-                 if (props.online) {
-                    return <div className="statut-online"></div>;
-                 } else {
-                    return <div lassName="statut-offline"></div>;
+            <div className="statut">
+                <p className="text">{props.online ? 'Online' : 'Offline'}</p> 
+                 {props.online ?
+                 <div className="statut-online"></div> :
+                 <div lassName="statut-offline"></div>
                  }
- 
-                 
-                <div className="status">
-
-                </div>
-                
             </div>
         </div>
     );
