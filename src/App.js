@@ -6,11 +6,11 @@ function App() {
   return (
     <div className="App">
       
-        <Contact avatar="https://randomuser.me/api/portraits/lego/6.jpg" name="Basil" Online />
+        <Contact avatar="https://randomuser.me/api/portraits/lego/6.jpg" name="Basil" online />
 
-        <Contact avatar="https://randomuser.me/api/portraits/lego/4.jpg" name="Markus" Online />
+        <Contact avatar="https://randomuser.me/api/portraits/lego/4.jpg" name="Markus" online />
 
-        <Contact avatar="https://randomuser.me/api/portraits/lego/8.jpg" name="Aldente" Offline />
+        <Contact avatar="https://randomuser.me/api/portraits/lego/8.jpg" name="Aldente" online={false} />
 
     </div>
   );
