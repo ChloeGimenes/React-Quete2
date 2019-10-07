@@ -7,7 +7,7 @@ function Contact(props) {
     return (
         <div className="Contact">
             <img className="avatar" src={props.avatar} alt='toto'/>
-            <div className="Name">{props.name}</div><br></br>
+            <div className="name">{props.name}</div><br></br>
             
             <div className="infos">
                 <p className="text">{props.online ? 'Online' : 'Offline'}</p>
