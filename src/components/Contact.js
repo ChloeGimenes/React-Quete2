@@ -12,8 +12,8 @@ function Contact(props) {
             <div className="statut">
                 <p className="text">{props.online ? 'Online' : 'Offline'}</p> 
                  {props.online ?
-                 <div className="statut-online"></div> :
-                 <div lassName="statut-offline"></div>
+                 <div className="status-online"></div> :
+                 <div lassName="status-offline"></div>
                  }
             </div>
         </div>
