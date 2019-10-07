@@ -11,6 +11,14 @@ function Contact(props) {
             
             <div className="infos">
                 <p className="text">{props.online ? 'Online' : 'Offline'}</p>
+                 
+                 if (props.online) {
+                    return <div className="statut-online"></div>;
+                 } else {
+                    return <div lassName="statut-offline"></div>;
+                 }
+ 
+                 
                 <div className="status">
 
                 </div>
