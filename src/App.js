@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import ContactList from './components/ContactList'
 import './App.css';
 
@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       
         <ContactList />
+      
 
     </div>
   );

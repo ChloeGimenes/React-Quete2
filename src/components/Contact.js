@@ -1,28 +1,57 @@
 import React from "react";
 import "./Contact.css";
+import Welcome from './Welcome';
 
-function Contact(props) {
-  return (
+
+
+
+class Contact extends React.Component {
+
+      constructor(props) {
+        super(props);
+        this.state = {
+          online : props.online,
+      };
+    }
+
+    render() {
+        
+      return (
+
     <div className="Contact">
-      <img className="avatar" src={props.avatar} alt="toto" />
+      <img
+        className="avatar"
+        id={this.props.star && "star"}
+        src={
+          this.props.avatar
+            ? this.props.avatar
+            : "https://www.drupal.org/files/issues/default-avatar.png" 
+            }
+        alt="toto"
+      />
+      <div className="hard">
+          <div className="status">
+              <div className="name">{this.props.name}</div>
+              <span
+                   className={this.state.online ? 'online' : ''}
+                   onClick={event => {
+                   const newOnline = !this.state.online;
+                   this.setState({ online: newOnline });
+                   }}
+                   >
+                   &#9733;
+                </span>
+             </div>
 
-      <div className="status">
-        <div className="name">{props.name}</div>
-        {
-            props.online ? (
-                <div>
-          <div className="status-online"></div>
-            <span className="status-text">Online</span>
-            </div>
-        ) : (
-            <div>
-          <div className="status-offline"></div>
-            <span className="status-text">Offline</span>
-            </div>
-        )}
+          <div>       
+             <Welcome />
+          </div>
+        </div>
+
       </div>
-    </div>
+    
   );
+}
 }
 
 export default Contact;
